@@ -27,7 +27,7 @@ module.exports = {
   },
 
 
-  fn: async function (inputs, exits) {
+  fn: async function (inputs) {
     try {
       var condition = {};
       if(inputs.listItemId) {
@@ -37,22 +37,11 @@ module.exports = {
       }
 
       var listItems = await Listitem.find(condition);
-      return exits.success({
-        description: 'The list items were retrieved successfully',
-        response: {
-          message: 'The list items were retrieved successfully',
-          data: listItems
-        }
-      })
+      return listItems;
 
     }
     catch(error) {
-      return exits.error({
-        description: 'Some Error Occured :(',
-        response: {
-          message: error.message
-        }
-      })
+      return error.message;
 
     }
 
