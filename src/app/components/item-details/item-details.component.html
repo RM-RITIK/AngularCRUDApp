@@ -1,0 +1,20 @@
+<form>
+  <div class="form-group">
+    <label for="title">Description</label>
+    <input
+      type="text"
+      class="form-control"
+      id="itemText"
+      [(ngModel)]="currentItem.itemText"
+      name="itemText"
+    />
+  </div>
+</form>
+
+<button
+  type="submit"
+  class="badge badge-success mb-2"
+  (click)="updateItem()"
+>
+  Update
+</button>

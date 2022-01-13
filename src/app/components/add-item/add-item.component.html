@@ -1,0 +1,25 @@
+<div>
+    <div class="submit-form">
+      <div *ngIf="!submitted">
+        <div class="form-group">
+          <label for="title">Item Description</label>
+          <input
+            type="text"
+            class="form-control"
+            id="title"
+            required
+            [(ngModel)]="item.itemText"
+            name="itemText"
+          />
+        </div>
+  
+        <button (click)="saveItem()" class="btn btn-success">Submit</button>
+      </div>
+  
+      <div *ngIf="submitted">
+        <h4>The Item was added successfully!</h4>
+        <button class="btn btn-success" (click)="newItem()">Add</button>
+      </div>
+    </div>
+  </div>
+  
