@@ -20,6 +20,9 @@ module.exports.routes = {
   ***************************************************************************/
 
   '/': { view: 'pages/homepage' },
+  'POST /api/list/add-item': 'list/add-item',
+  'GET /api/list/get-item': 'list/get-item',
+  'POST /api/list/update-item': 'list/update-item'
 
 
   /***************************************************************************
